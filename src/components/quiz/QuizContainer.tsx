@@ -2,6 +2,7 @@ import { useQuiz } from '@/hooks/useQuiz';
 import QuizStart from './QuizStart';
 import QuizProgress from './QuizProgress';
 import QuizQuestion from './QuizQuestion';
+import QuizResult from './QuizResult';
 
 const QuizContainer = () => {
   const {
@@ -9,8 +10,13 @@ const QuizContainer = () => {
     currentQuestionIndex,
     totalQuestions,
     currentQuestion,
+    result,
+    email,
+    setEmail,
     startQuiz,
     answerQuestion,
+    submitEmail,
+    resetQuiz,
     progress,
   } = useQuiz();
 
@@ -35,7 +41,16 @@ const QuizContainer = () => {
         </>
       )}
 
-      {/* Result is now shown on separate page /r7k3pq */}
+      {(state === 'result' || state === 'complete') && result && (
+        <QuizResult
+          result={result}
+          showFullResult={state === 'complete'}
+          email={email}
+          onEmailChange={setEmail}
+          onSubmitEmail={submitEmail}
+          onReset={resetQuiz}
+        />
+      )}
     </div>
   );
 };

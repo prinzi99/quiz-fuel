@@ -10,42 +10,42 @@ const ReframingSection = () => {
   return (
     <section className="section-padding">
       <div className="container-narrow">
-        {/* Main heading - SEO optimized */}
+        {/* Main heading - Google Ads compliant */}
         <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-6">
-          Dein Körper ist nicht kaputt – er folgt nur anderen Regeln
+          Was für eine Person gut funktioniert, muss nicht automatisch für alle gleich passend sein
         </h2>
 
         {/* Explanatory text */}
         <div className="max-w-2xl mx-auto text-center mb-12">
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
             Jeder Stoffwechsel reagiert unterschiedlich auf Nahrung, Stress und Lebensstil. 
-            Was bei einer Person funktioniert, kann bei einer anderen zu einem 
-            <strong className="text-foreground"> langsamen Stoffwechsel</strong> führen.
+            Verschiedene Ernährungsansätze können bei verschiedenen Menschen 
+            <strong className="text-foreground"> unterschiedliche Ergebnisse</strong> zeigen.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Standard-Diäten – ob ketogene Ernährung, Low Carb oder klassische Keto Diät – 
-            berücksichtigen selten individuelle Faktoren wie Hormone, Timing und Stressbelastung.
+            Allgemeine Ernährungsempfehlungen berücksichtigen selten individuelle Faktoren 
+            wie persönliche Vorlieben, Lebensstil und körperliche Voraussetzungen.
           </p>
         </div>
 
-        {/* SEO-optimized secondary headings */}
+        {/* Information cards - Google Ads compliant */}
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <div className="p-6 rounded-xl bg-muted/50 border border-border">
             <h3 className="text-lg font-semibold text-foreground mb-3">
-              Was ein langsamer Stoffwechsel wirklich bedeutet
+              Stoffwechsel besser verstehen
             </h3>
             <p className="text-muted-foreground">
-              Ein verlangsamter Stoffwechsel ist keine Krankheit, sondern eine Reaktion 
-              Deines Körpers auf äußere Einflüsse. Er lässt sich verstehen und beeinflussen.
+              Der Stoffwechsel ist ein komplexes Zusammenspiel verschiedener Prozesse. 
+              Mehr Wissen darüber kann helfen, eigene Erfahrungen besser einzuordnen.
             </p>
           </div>
           <div className="p-6 rounded-xl bg-muted/50 border border-border">
             <h3 className="text-lg font-semibold text-foreground mb-3">
-              Warum Stoffwechsel-Störungen Abnehmen blockieren
+              Individuelle Unterschiede beachten
             </h3>
             <p className="text-muted-foreground">
-              Wenn Dein Stoffwechsel nicht optimal arbeitet, werden selbst die besten 
-              Ernährungspläne nicht die gewünschten Ergebnisse bringen.
+              Menschen reagieren unterschiedlich auf Ernährungsweisen. 
+              Ein besseres Verständnis der eigenen Situation kann hilfreich sein.
             </p>
           </div>
         </div>

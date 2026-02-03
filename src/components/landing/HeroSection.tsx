@@ -27,14 +27,20 @@ const HeroSection = () => {
 
           {/* H1 - Main headline */}
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-4 md:mb-6 px-2">
-            Warum Keto & gesunde Ernährung bei Dir nicht funktionieren – 
-            <span className="text-primary"> obwohl Du alles richtig machst</span>
+            Warum Ernährungsstrategien 
+            <span className="text-primary"> unterschiedlich wirken können</span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed px-2">
-            Viele Menschen scheitern nicht an Disziplin, sondern an einem blockierten Stoffwechsel. 
-            Finde heraus, was Deinen Körper gerade ausbremst.
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-4 md:mb-6 leading-relaxed px-2">
+            Viele Menschen machen mit ähnlichen Ernährungsansätzen unterschiedliche Erfahrungen. 
+            Diese Unterschiede können mit individuellen Faktoren zusammenhängen.
+          </p>
+
+          {/* Disclaimer - early placement */}
+          <p className="text-xs text-muted-foreground/70 max-w-xl mx-auto mb-6 md:mb-8 px-4">
+            Hinweis: Dieses Quiz ersetzt keine medizinische Beratung oder Diagnose. 
+            Es dient ausschließlich der Selbstreflexion und allgemeinen Information.
           </p>
 
           {/* Primary CTA */}

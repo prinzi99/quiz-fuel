@@ -30,20 +30,37 @@
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+
+      // Consent Mode v2: default denied (DSGVO-konform)
       gtag('consent', 'default', {
         'ad_storage': 'denied',
         'ad_user_data': 'denied',
         'ad_personalization': 'denied',
         'analytics_storage': 'denied',
-        'functionality_storage': 'denied',
-        'personalization_storage': 'denied',
-        'security_storage': 'granted',
         'wait_for_update': 500
       });
-      gtag('set', 'url_passthrough', true);
-      gtag('set', 'ads_data_redaction', true);
+
+      gtag('js', new Date());
+      gtag('config', 'AW-XXXXXXXXXX'); // TODO: Replace with your Google Ads Tag ID
     </script>
-    <!-- End Consent Mode V2 Default -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"></script> <!-- TODO: Replace with your Google Ads Tag ID -->
+
+    <!-- Event snippet for conversion tracking (optional) -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+          'send_to': 'AW-XXXXXXXXXX/CONVERSION_LABEL', // TODO: Replace with your conversion ID
+          'event_callback': callback
+        });
+        return false;
+      }
+    </script>
+    <!-- End Google Tag -->
 
     <!-- Quentn Form Integration (necessary for Double-Opt-In forms) -->
     <script src="https://assets.quentn.com/fb/0.2/dist-user-wc/embed-form.umd.min.js" defer></script>

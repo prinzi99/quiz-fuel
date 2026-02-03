@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, AlertCircle, XCircle, Lightbulb } from 'lucide-react';
+import Header from '@/components/Header';
 
 const ResultPage = () => {
   const typicalSigns = [
@@ -18,6 +19,7 @@ const ResultPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Header />
       {/* Main Content */}
       <main className="container-wide section-padding">
         <div className="max-w-2xl mx-auto">

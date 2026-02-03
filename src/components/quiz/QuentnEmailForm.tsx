@@ -1,17 +1,21 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { User, Mail } from 'lucide-react';
 
 interface QuentnEmailFormProps {
   onEmailSubmit?: () => void;
   buttonText?: string;
   formId?: string;
+  redirectTo?: string;
 }
 
 export const QuentnEmailForm = ({ 
   onEmailSubmit, 
   buttonText = "👉 Einordnung per Mail erhalten",
-  formId = "2785"
+  formId = "2785",
+  redirectTo = "/danke"
 }: QuentnEmailFormProps) => {
+  const navigate = useNavigate();
   const [firstName, setFirstName] = useState('');
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -40,12 +44,16 @@ export const QuentnEmailForm = ({
       if (onEmailSubmit) {
         onEmailSubmit();
       }
+
+      // Redirect to thank you page
+      navigate(redirectTo);
     } catch (error) {
       console.error('Error submitting to Quentn:', error);
       // Still navigate even if Quentn fails (fallback)
       if (onEmailSubmit) {
         onEmailSubmit();
       }
+      navigate(redirectTo);
     } finally {
       setIsSubmitting(false);
     }

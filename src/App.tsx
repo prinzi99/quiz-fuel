@@ -7,6 +7,8 @@ import Index from "./pages/Index";
 import ResultPage from "./pages/ResultPage";
 import ResultPageB from "./pages/ResultPageB";
 import ResultPageC from "./pages/ResultPageC";
+import Impressum from "./pages/Impressum";
+import Datenschutz from "./pages/Datenschutz";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +24,8 @@ const App = () => (
           <Route path="/dfgk34k" element={<ResultPage />} />
           <Route path="/k93fda" element={<ResultPageB />} />
           <Route path="/x7q9p2" element={<ResultPageC />} />
+          <Route path="/impressum" element={<Impressum />} />
+          <Route path="/datenschutz" element={<Datenschutz />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

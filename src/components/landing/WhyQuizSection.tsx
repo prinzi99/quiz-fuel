@@ -5,13 +5,13 @@ import { Target, Clock, Lightbulb } from "lucide-react";
 const benefits = [
   {
     icon: Target,
-    title: "Stoffwechsel-Typ erkennen",
-    description: "Ob Fettstoffwechsel oder Kohlenhydrat-Stoffwechsel – Dein Typ entscheidet über Erfolg oder Blockade.",
+    title: "Mögliche Stoffwechsel-Schwerpunkte",
+    description: "Manche Menschen reagieren unterschiedlich auf Makronährstoffe – das Quiz gibt eine erste Orientierung.",
   },
   {
     icon: Lightbulb,
-    title: "Erste Orientierung",
-    description: "Das Quiz liefert keine Diagnose, sondern Klarheit über mögliche Ansatzpunkte.",
+    title: "Hinweise zur Selbstreflexion",
+    description: "Keine Diagnose, sondern Anregungen zum Nachdenken über die eigene Situation.",
   },
   {
     icon: Clock,
@@ -24,13 +24,13 @@ const WhyQuizSection = () => {
   return (
     <section className="section-padding bg-section-alt">
       <div className="container-narrow">
-        {/* Section heading */}
+        {/* Section heading - Google Ads compliant */}
         <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-4">
-          Warum ein Quiz der schnellste Weg zur richtigen Lösung ist
+          Warum dieses Quiz ein guter Einstieg sein kann
         </h2>
 
         <p className="text-lg text-muted-foreground text-center max-w-xl mx-auto mb-12">
-          Abnehmen ohne hungern beginnt damit, Deinen Körper zu verstehen.
+          Ein besseres Verständnis des eigenen Körpers kann ein hilfreicher erster Schritt sein.
         </p>
 
         {/* Benefits grid */}
@@ -53,16 +53,15 @@ const WhyQuizSection = () => {
           ))}
         </div>
 
-        {/* SEO content block */}
+        {/* Info content block - Google Ads compliant */}
         <div className="bg-muted/30 rounded-xl p-6 md:p-8 mb-10">
           <h3 className="text-lg font-semibold text-foreground mb-3">
-            Fettstoffwechsel vs. Kohlenhydrat-Stoffwechsel
+            Unterschiedliche Stoffwechsel-Schwerpunkte
           </h3>
           <p className="text-muted-foreground leading-relaxed">
-            Manche Menschen verbrennen Fett effizienter, andere Kohlenhydrate. 
-            Ein pauschaler Keto Ernährungsplan funktioniert deshalb nicht für jeden gleich. 
-            Das Quiz hilft Dir herauszufinden, welcher Typ Du bist und warum 
-            Deine bisherigen Versuche möglicherweise nicht zum Ziel geführt haben.
+            Menschen können unterschiedlich auf verschiedene Makronährstoffe reagieren. 
+            Das Quiz bietet eine erste Orientierung und Anregungen zur Selbstreflexion – 
+            es ersetzt jedoch keine professionelle Beratung.
           </p>
         </div>
 

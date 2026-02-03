@@ -3,19 +3,19 @@ import { CircleAlert, Zap, Scale, HelpCircle } from "lucide-react";
 const painPoints = [
   {
     icon: Scale,
-    text: "Du ernährst Dich gesund oder Low Carb – aber Dein Gewicht stagniert",
+    text: "Du hast verschiedene Ernährungsansätze ausprobiert und suchst nach Orientierung",
   },
   {
     icon: Zap,
-    text: "Keto hat vielleicht kurz funktioniert – dann kam der Stillstand",
+    text: "Du möchtest besser verstehen, wie Dein Körper auf verschiedene Lebensmittel reagiert",
   },
   {
     icon: CircleAlert,
-    text: "Du kämpfst mit Heißhunger, Müdigkeit oder Energie-Crashes",
+    text: "Du interessierst Dich für Zusammenhänge zwischen Ernährung und Wohlbefinden",
   },
   {
     icon: HelpCircle,
-    text: "Du fragst Dich, warum es bei anderen klappt – aber nicht bei Dir",
+    text: "Du möchtest mehr über individuelle Unterschiede beim Stoffwechsel erfahren",
   },
 ];
 
@@ -23,9 +23,9 @@ const IdentificationSection = () => {
   return (
     <section className="section-padding bg-section-alt">
       <div className="container-narrow">
-        {/* Section heading */}
+        {/* Section heading - Google Ads compliant */}
         <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-12">
-          Kommt Dir das bekannt vor?
+          Erkennst Du Dich hier wieder?
         </h2>
 
         {/* Pain points */}
@@ -45,9 +45,9 @@ const IdentificationSection = () => {
           ))}
         </div>
 
-        {/* Transition text */}
+        {/* Transition text - Google Ads compliant */}
         <p className="text-center text-muted-foreground mt-10 text-lg">
-          Wenn Du Dich hier wiedererkennst, liegt es wahrscheinlich nicht an Dir.
+          Wenn Du Dich hier wiedererkennst, könnte das Quiz interessant für Dich sein.
         </p>
       </div>
     </section>

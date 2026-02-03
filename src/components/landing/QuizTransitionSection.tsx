@@ -12,28 +12,28 @@ const QuizTransitionSection = () => {
         {/* Section header */}
         <div className="text-center mb-10">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
-            Was blockiert Deine Fettverbrennung wirklich?
+            Mehr Verständnis für Deinen eigenen Stoffwechsel
           </h2>
 
           <p className="text-lg text-quiz-section-foreground/80 max-w-xl mx-auto">
-            Beantworte ein paar kurze Fragen und erhalte eine individuelle 
-            Einschätzung Deines Stoffwechsels.
+            Beantworte ein paar kurze Fragen und erhalte eine orientierende 
+            Einordnung mit Hinweisen zur Selbstreflexion.
           </p>
 
-          {/* SEO note */}
+          {/* Info note - Google Ads compliant */}
           <p className="text-sm text-quiz-section-foreground/60 mt-4">
-            Warum Hungern keine Lösung ist: Dein Körper braucht die richtigen Signale, nicht weniger Nahrung.
+            Allgemeine Informationen rund um Ernährung und Lebensstil.
           </p>
         </div>
 
         {/* CTA Box */}
         <div className="max-w-xl mx-auto bg-background/10 backdrop-blur-sm rounded-2xl p-8 text-center">
           <h3 className="text-xl font-bold mb-4 text-quiz-section-foreground">
-            Bereit für Deine persönliche Analyse?
+            Neugierig auf Deine Einordnung?
           </h3>
           <p className="text-quiz-section-foreground/80 mb-6">
-            In nur 2 Minuten erfährst Du, welcher Stoffwechsel-Typ Du bist 
-            und was Du konkret tun kannst.
+            In nur 2 Minuten erhältst Du eine orientierende Einordnung 
+            mit Hinweisen zur Selbstreflexion.
           </p>
           <Button 
             variant="cta" 

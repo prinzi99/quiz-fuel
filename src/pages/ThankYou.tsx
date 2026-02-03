@@ -38,10 +38,6 @@ const ThankYou = () => {
                 <span className="font-semibold text-foreground">Prüfe jetzt Deinen Posteingang</span>
               </div>
               
-              <p className="text-sm text-muted-foreground mb-2">
-                Die E-Mail kommt von: <strong>Philipp &lt;info2@prinzphilipp.at&gt;</strong>
-              </p>
-              
               <p className="text-sm text-muted-foreground">
                 Schau auch im <strong>Spam-Ordner</strong> nach, falls die E-Mail nicht sofort ankommt.
               </p>

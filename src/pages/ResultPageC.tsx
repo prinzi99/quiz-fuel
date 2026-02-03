@@ -115,9 +115,12 @@ const ResultPageC = () => {
                 variant="cta"
                 size="xl"
                 className="w-full sm:w-auto group"
+                asChild
               >
-                Kostenlose Auswertung als PDF herunterladen
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <a href="https://drive.google.com/file/d/14yKWsTsyruBggxHCcYNs6lqHpKPf8EYH/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                  Kostenlose Auswertung als PDF herunterladen
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </a>
               </Button>
               <p className="text-xs text-muted-foreground mt-4">
                 Kein Spam. Kein Abo. Nur Deine persönliche Auswertung.

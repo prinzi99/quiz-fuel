@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
@@ -18,10 +19,6 @@ const MobileStickyCTA = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToQuiz = () => {
-    document.getElementById("quiz-section")?.scrollIntoView({ behavior: "smooth" });
-  };
-
   if (!isVisible) return null;
 
   return (
@@ -29,10 +26,12 @@ const MobileStickyCTA = () => {
       <Button 
         variant="cta" 
         size="lg" 
-        onClick={scrollToQuiz}
+        asChild
         className="w-full"
       >
-        Zum Stoffwechsel-Quiz
+        <Link to="/quiz">
+          Zum Stoffwechsel-Quiz
+        </Link>
       </Button>
     </div>
   );

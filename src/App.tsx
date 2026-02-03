@@ -7,6 +7,7 @@ import { CookieConsentProvider } from "./contexts/CookieConsentContext";
 import CookieBanner from "./components/CookieBanner";
 import CookieSettingsButton from "./components/CookieSettingsButton";
 import Index from "./pages/Index";
+import Quiz from "./pages/Quiz";
 import ResultPage from "./pages/ResultPage";
 import ResultPageB from "./pages/ResultPageB";
 import ResultPageC from "./pages/ResultPageC";
@@ -25,6 +26,7 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/quiz" element={<Quiz />} />
             <Route path="/dfgk34k" element={<ResultPage />} />
             <Route path="/k93fda" element={<ResultPageB />} />
             <Route path="/x7q9p2" element={<ResultPageC />} />

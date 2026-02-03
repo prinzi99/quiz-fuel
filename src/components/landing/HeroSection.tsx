@@ -1,12 +1,9 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 import heroImage from "@/assets/hero-abstract.jpg";
 
 const HeroSection = () => {
-  const scrollToQuiz = () => {
-    document.getElementById("quiz-section")?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background with subtle gradient overlay */}
@@ -44,10 +41,12 @@ const HeroSection = () => {
           <Button 
             variant="cta" 
             size="xl" 
-            onClick={scrollToQuiz}
+            asChild
             className="mb-6"
           >
-            Jetzt herausfinden, was meinen Stoffwechsel blockiert
+            <Link to="/quiz">
+              Jetzt herausfinden, was meinen Stoffwechsel blockiert
+            </Link>
           </Button>
 
           {/* Time indicator */}

@@ -1,5 +1,6 @@
-import { CheckCircle2 } from "lucide-react";
-import QuizContainer from "@/components/quiz/QuizContainer";
+import { Link } from "react-router-dom";
+import { CheckCircle2, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const QuizTransitionSection = () => {
   return (
@@ -25,8 +26,27 @@ const QuizTransitionSection = () => {
           </p>
         </div>
 
-        {/* Quiz Widget */}
-        <QuizContainer />
+        {/* CTA Box */}
+        <div className="max-w-xl mx-auto bg-background/10 backdrop-blur-sm rounded-2xl p-8 text-center">
+          <h3 className="text-xl font-bold mb-4 text-quiz-section-foreground">
+            Bereit für Deine persönliche Analyse?
+          </h3>
+          <p className="text-quiz-section-foreground/80 mb-6">
+            In nur 2 Minuten erfährst Du, welcher Stoffwechsel-Typ Du bist 
+            und was Du konkret tun kannst.
+          </p>
+          <Button 
+            variant="cta" 
+            size="xl" 
+            asChild
+            className="w-full sm:w-auto"
+          >
+            <Link to="/quiz">
+              Jetzt Quiz starten
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+          </Button>
+        </div>
 
         {/* Trust indicators */}
         <div className="flex flex-wrap justify-center gap-6 text-quiz-section-foreground/70 text-sm mt-10">

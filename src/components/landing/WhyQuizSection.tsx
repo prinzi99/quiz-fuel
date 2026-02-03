@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Target, Clock, Lightbulb } from "lucide-react";
 
@@ -20,10 +21,6 @@ const benefits = [
 ];
 
 const WhyQuizSection = () => {
-  const scrollToQuiz = () => {
-    document.getElementById("quiz-section")?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <section className="section-padding bg-section-alt">
       <div className="container-narrow">
@@ -74,9 +71,11 @@ const WhyQuizSection = () => {
           <Button 
             variant="ctaSecondary" 
             size="lg" 
-            onClick={scrollToQuiz}
+            asChild
           >
-            Stoffwechsel-Quiz starten (ca. 2 Minuten)
+            <Link to="/quiz">
+              Stoffwechsel-Quiz starten (ca. 2 Minuten)
+            </Link>
           </Button>
         </div>
       </div>

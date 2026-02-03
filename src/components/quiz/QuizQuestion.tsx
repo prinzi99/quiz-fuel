@@ -39,15 +39,18 @@ const QuizQuestion = ({ question, onAnswer }: QuizQuestionProps) => {
             disabled={isTransitioning}
             className={cn(
               'w-full text-left p-5 rounded-xl border-2 transition-all duration-200',
-              'hover:border-primary hover:bg-primary/5',
+              'hover:border-primary hover:bg-primary/10 hover:shadow-md',
               'focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2',
               'disabled:cursor-not-allowed',
               selectedId === answer.id
-                ? 'border-primary bg-primary/10 scale-[0.98]'
-                : 'border-border bg-card'
+                ? 'border-accent bg-accent text-accent-foreground scale-[0.98] shadow-lg'
+                : 'border-primary/30 bg-card shadow-sm'
             )}
           >
-            <span className="text-base md:text-lg text-foreground leading-relaxed">
+            <span className={cn(
+              "text-base md:text-lg leading-relaxed font-medium",
+              selectedId === answer.id ? "text-accent-foreground" : "text-foreground"
+            )}>
               {answer.text}
             </span>
           </button>

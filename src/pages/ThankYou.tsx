@@ -4,10 +4,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/landing/Footer';
-
 const ThankYou = () => {
-  return (
-    <div className="min-h-screen flex flex-col bg-background">
+  return <div className="min-h-screen flex flex-col bg-background">
       <Helmet>
         <title>Danke für Deine Anmeldung | Philipp's Biohack</title>
         <meta name="description" content="Deine Stoffwechsel-Auswertung ist unterwegs. Prüfe jetzt Deinen Posteingang." />
@@ -31,9 +29,7 @@ const ThankYou = () => {
             </h1>
 
             {/* Subheadline */}
-            <p className="text-lg text-muted-foreground mb-8 max-w-md mx-auto">
-              In wenigen Minuten erhältst Du Deine persönliche Stoffwechsel-Analyse per E-Mail.
-            </p>
+            <p className="text-lg text-muted-foreground mb-8 max-w-md mx-auto">In wenigen Sekunden erhältst Du Deine persönliche Stoffwechsel-Analyse per E-Mail.</p>
 
             {/* Email Check Box */}
             <div className="bg-primary/5 border border-primary/10 rounded-xl p-6 mb-8">
@@ -78,8 +74,6 @@ const ThankYou = () => {
       </main>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default ThankYou;

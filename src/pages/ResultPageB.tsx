@@ -25,7 +25,7 @@ const ResultPageB = () => {
           {/* 1. Headline */}
           <header className="text-center mb-12">
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground leading-tight">
-              Warum Dein Körper Energie zurückhält
+              Warum Dein Körper <span className="text-primary">Energie zurückhält</span>
             </h1>
           </header>
 
@@ -33,7 +33,7 @@ const ResultPageB = () => {
           <section className="mb-10">
             <div className="bg-primary/5 border border-primary/10 rounded-2xl p-6 md:p-8">
               <p className="text-lg text-foreground leading-relaxed">
-                Dein Ergebnis zeigt kein Willensproblem, sondern <strong>einen Körper, 
+                Dein Ergebnis zeigt kein Willensproblem, sondern <strong className="text-primary">einen Körper, 
                 der auf Mangel reagiert.</strong>
               </p>
             </div>
@@ -41,7 +41,7 @@ const ResultPageB = () => {
 
           {/* 3. Explanation */}
           <section className="mb-10">
-            <h2 className="text-xl font-semibold text-foreground mb-4">
+            <h2 className="text-xl font-bold text-foreground mb-4">
               Was das bedeutet
             </h2>
             <p className="text-muted-foreground leading-relaxed">
@@ -53,14 +53,14 @@ const ResultPageB = () => {
 
           {/* 4. Typical Signs */}
           <section className="mb-10">
-            <h2 className="text-xl font-semibold text-foreground mb-4 flex items-center gap-2">
+            <h2 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
               <AlertCircle className="w-5 h-5 text-primary" />
               Typische Anzeichen
             </h2>
             <ul className="space-y-3">
               {typicalSigns.map((sign, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 flex-shrink-0" />
+                  <span className="w-2 h-2 rounded-full bg-primary mt-2.5 flex-shrink-0" />
                   <span className="text-foreground">{sign}</span>
                 </li>
               ))}
@@ -69,11 +69,11 @@ const ResultPageB = () => {
 
           {/* 5. Common Mistakes */}
           <section className="mb-10">
-            <h2 className="text-xl font-semibold text-foreground mb-4 flex items-center gap-2">
+            <h2 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
               <XCircle className="w-5 h-5 text-destructive" />
               Häufige Fehler
             </h2>
-            <div className="bg-destructive/5 border border-destructive/10 rounded-xl p-5">
+            <div className="bg-destructive/5 border border-destructive/10 rounded-2xl p-5">
               <ul className="space-y-3">
                 {commonMistakes.map((mistake, index) => (
                   <li key={index} className="flex items-start gap-3">
@@ -87,13 +87,13 @@ const ResultPageB = () => {
 
           {/* 6. Outlook */}
           <section className="mb-12">
-            <h2 className="text-xl font-semibold text-foreground mb-4 flex items-center gap-2">
+            <h2 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
               <Lightbulb className="w-5 h-5 text-secondary" />
               Was Dein Körper jetzt braucht
             </h2>
-            <div className="bg-secondary/10 border border-secondary/20 rounded-xl p-5">
+            <div className="bg-secondary/10 border border-secondary/20 rounded-2xl p-5">
               <p className="text-foreground leading-relaxed">
-                Fettverbrennung funktioniert nur, wenn der Körper sich <strong>sicher und 
+                Fettverbrennung funktioniert nur, wenn der Körper sich <strong className="text-secondary">sicher und 
                 versorgt</strong> fühlt. Das bedeutet: gezielte Nährstoffversorgung statt 
                 weitere Einschränkung.
               </p>
@@ -102,8 +102,8 @@ const ResultPageB = () => {
 
           {/* 7. CTA */}
           <section className="text-center">
-            <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
-              <h3 className="text-xl font-semibold text-foreground mb-3">
+            <div className="bg-card border border-border rounded-2xl p-6 md:p-8 shadow-lg">
+              <h3 className="text-xl font-bold text-foreground mb-3">
                 Dein nächster Schritt
               </h3>
               <p className="text-muted-foreground mb-6">

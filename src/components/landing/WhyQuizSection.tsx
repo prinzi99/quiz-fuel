@@ -28,8 +28,8 @@ const WhyQuizSection = () => {
     <section className="section-padding bg-section-alt">
       <div className="container-narrow">
         {/* Section heading */}
-        <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-4">
-          Warum ein Quiz der schnellste Weg zur richtigen Lösung ist
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground text-center mb-4">
+          Warum ein <span className="text-primary">Quiz</span> der schnellste Weg ist
         </h2>
 
         <p className="text-lg text-muted-foreground text-center max-w-xl mx-auto mb-12">
@@ -41,10 +41,10 @@ const WhyQuizSection = () => {
           {benefits.map((benefit, index) => (
             <div 
               key={index}
-              className="text-center p-6 rounded-xl bg-card border border-border"
+              className="text-center p-6 rounded-2xl bg-card border border-border hover:border-primary/20 hover:shadow-lg transition-all duration-300"
             >
-              <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                <benefit.icon className="w-7 h-7 text-primary" />
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center mx-auto mb-5 shadow-lg">
+                <benefit.icon className="w-8 h-8 text-primary-foreground" />
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-2">
                 {benefit.title}
@@ -57,7 +57,7 @@ const WhyQuizSection = () => {
         </div>
 
         {/* SEO content block */}
-        <div className="bg-muted/30 rounded-xl p-6 md:p-8 mb-10">
+        <div className="bg-card border border-border rounded-2xl p-6 md:p-8 mb-10">
           <h3 className="text-lg font-semibold text-foreground mb-3">
             Fettstoffwechsel vs. Kohlenhydrat-Stoffwechsel
           </h3>
@@ -72,11 +72,11 @@ const WhyQuizSection = () => {
         {/* Secondary CTA */}
         <div className="text-center">
           <Button 
-            variant="ctaSecondary" 
+            variant="cta" 
             size="lg" 
             onClick={scrollToQuiz}
           >
-            Stoffwechsel-Quiz starten (ca. 2 Minuten)
+            Stoffwechsel-Quiz starten
           </Button>
         </div>
       </div>

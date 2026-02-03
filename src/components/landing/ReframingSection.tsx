@@ -8,12 +8,11 @@ const trustElements = [
 
 const ReframingSection = () => {
   return (
-    <section className="section-padding bg-background">
+    <section className="section-padding">
       <div className="container-narrow">
         {/* Main heading - SEO optimized */}
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground text-center mb-6">
-          Dein Körper ist nicht kaputt – 
-          <span className="text-primary"> er folgt nur anderen Regeln</span>
+        <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-6">
+          Dein Körper ist nicht kaputt – er folgt nur anderen Regeln
         </h2>
 
         {/* Explanatory text */}
@@ -30,21 +29,21 @@ const ReframingSection = () => {
         </div>
 
         {/* SEO-optimized secondary headings */}
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
-          <div className="p-6 rounded-2xl bg-primary/5 border border-primary/10 hover:border-primary/20 transition-colors">
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="p-6 rounded-xl bg-muted/50 border border-border">
             <h3 className="text-lg font-semibold text-foreground mb-3">
               Was ein langsamer Stoffwechsel wirklich bedeutet
             </h3>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-muted-foreground">
               Ein verlangsamter Stoffwechsel ist keine Krankheit, sondern eine Reaktion 
               Deines Körpers auf äußere Einflüsse. Er lässt sich verstehen und beeinflussen.
             </p>
           </div>
-          <div className="p-6 rounded-2xl bg-secondary/5 border border-secondary/10 hover:border-secondary/20 transition-colors">
+          <div className="p-6 rounded-xl bg-muted/50 border border-border">
             <h3 className="text-lg font-semibold text-foreground mb-3">
               Warum Stoffwechsel-Störungen Abnehmen blockieren
             </h3>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-muted-foreground">
               Wenn Dein Stoffwechsel nicht optimal arbeitet, werden selbst die besten 
               Ernährungspläne nicht die gewünschten Ergebnisse bringen.
             </p>
@@ -52,14 +51,14 @@ const ReframingSection = () => {
         </div>
 
         {/* Trust elements */}
-        <div className="flex flex-wrap justify-center gap-3">
+        <div className="flex flex-wrap justify-center gap-4">
           {trustElements.map((element, index) => (
             <div 
               key={index}
-              className="flex items-center gap-2 px-5 py-3 rounded-full bg-secondary text-secondary-foreground font-medium"
+              className="flex items-center gap-2 px-5 py-3 rounded-full bg-secondary/20 text-secondary-foreground"
             >
               <element.icon className="w-4 h-4" />
-              <span className="text-sm">{element.text}</span>
+              <span className="text-sm font-medium">{element.text}</span>
             </div>
           ))}
         </div>

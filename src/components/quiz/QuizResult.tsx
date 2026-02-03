@@ -1,6 +1,6 @@
+import { Sparkles, Mail, CheckCircle2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { ArrowRight, CheckCircle2, Mail, Sparkles } from 'lucide-react';
+import QuentnEmailForm from './QuentnEmailForm';
 import type { ProfileResult } from '@/lib/quizData';
 
 interface QuizResultProps {
@@ -20,13 +20,9 @@ const QuizResult = ({
   onSubmitEmail,
   onReset,
 }: QuizResultProps) => {
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    onSubmitEmail();
-  };
 
   if (!showFullResult) {
-    // Teaser view with email gate
+    // Teaser view with Quentn email gate
     return (
       <div className="animate-fade-in-up">
         {/* Result Teaser */}
@@ -48,7 +44,7 @@ const QuizResult = ({
           </p>
         </div>
 
-        {/* Email Gate */}
+        {/* Quentn Email Gate */}
         <div className="bg-card border border-border rounded-2xl p-6 md:p-8 shadow-lg">
           <div className="text-center mb-6">
             <Mail className="w-10 h-10 text-primary mx-auto mb-4" />
@@ -60,30 +56,11 @@ const QuizResult = ({
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <Input
-              type="email"
-              placeholder="Deine E-Mail-Adresse"
-              value={email}
-              onChange={(e) => onEmailChange(e.target.value)}
-              required
-              className="h-12 text-base border-2 focus:border-primary"
-            />
-            <Button
-              type="submit"
-              variant="cta"
-              size="xl"
-              className="w-full group"
-              disabled={!email || !email.includes('@')}
-            >
-              Auswertung & PDF per E-Mail erhalten
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </form>
-
-          <p className="text-xs text-muted-foreground text-center mt-4">
-            Deine Daten sind sicher. Kein Spam, jederzeit abbestellbar.
-          </p>
+          {/* Quentn Form Integration */}
+          <QuentnEmailForm 
+            onEmailSubmit={onSubmitEmail}
+            buttonText="Auswertung & PDF per E-Mail erhalten"
+          />
         </div>
       </div>
     );
@@ -132,7 +109,7 @@ const QuizResult = ({
       <div className="text-center bg-secondary/10 rounded-xl p-5 mb-6">
         <Mail className="w-6 h-6 text-secondary mx-auto mb-2" />
         <p className="text-sm text-foreground">
-          Dein ausführliches PDF ist unterwegs an <strong>{email}</strong>
+          Dein ausführliches PDF ist unterwegs. Prüfe Deinen Posteingang!
         </p>
       </div>
 

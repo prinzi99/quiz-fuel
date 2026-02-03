@@ -5,7 +5,7 @@ const QuizTransitionSection = () => {
   return (
     <section 
       id="quiz-section" 
-      className="section-padding bg-quiz-section text-quiz-section-foreground"
+      className="section-padding bg-gradient-to-b from-primary via-primary to-primary/95 text-primary-foreground"
     >
       <div className="container-wide">
         {/* Section header */}
@@ -14,13 +14,13 @@ const QuizTransitionSection = () => {
             Was blockiert Deine Fettverbrennung wirklich?
           </h2>
 
-          <p className="text-lg text-quiz-section-foreground/80 max-w-xl mx-auto">
+          <p className="text-lg text-primary-foreground/80 max-w-xl mx-auto">
             Beantworte ein paar kurze Fragen und erhalte eine individuelle 
             Einschätzung Deines Stoffwechsels.
           </p>
 
           {/* SEO note */}
-          <p className="text-sm text-quiz-section-foreground/60 mt-4">
+          <p className="text-sm text-primary-foreground/60 mt-4">
             Warum Hungern keine Lösung ist: Dein Körper braucht die richtigen Signale, nicht weniger Nahrung.
           </p>
         </div>
@@ -29,7 +29,7 @@ const QuizTransitionSection = () => {
         <QuizContainer />
 
         {/* Trust indicators */}
-        <div className="flex flex-wrap justify-center gap-6 text-quiz-section-foreground/70 text-sm mt-10">
+        <div className="flex flex-wrap justify-center gap-6 text-primary-foreground/80 text-sm mt-10">
           <div className="flex items-center gap-2">
             <CheckCircle2 className="w-4 h-4" />
             <span>Kostenlos</span>

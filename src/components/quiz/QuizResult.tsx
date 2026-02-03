@@ -1,6 +1,6 @@
 import { Sparkles, Mail, CheckCircle2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import QuentnEmailForm from './QuentnEmailForm';
+import { QuentnEmailForm } from './QuentnEmailForm';
 import type { ProfileResult } from '@/lib/quizData';
 
 interface QuizResultProps {
@@ -15,8 +15,6 @@ interface QuizResultProps {
 const QuizResult = ({
   result,
   showFullResult,
-  email,
-  onEmailChange,
   onSubmitEmail,
   onReset,
 }: QuizResultProps) => {
@@ -59,8 +57,12 @@ const QuizResult = ({
           {/* Quentn Form Integration */}
           <QuentnEmailForm 
             onEmailSubmit={onSubmitEmail}
-            buttonText="Auswertung & PDF per E-Mail erhalten"
+            buttonText="👉 Auswertung per Mail erhalten"
           />
+
+          <p className="text-xs text-muted-foreground text-center mt-4">
+            Deine Daten sind sicher. Kein Spam, jederzeit abbestellbar.
+          </p>
         </div>
       </div>
     );

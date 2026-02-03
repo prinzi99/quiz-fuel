@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   quizQuestions,
   profiles,
@@ -9,6 +10,8 @@ import {
 } from '@/lib/quizData';
 
 export type QuizState = 'start' | 'questions' | 'result' | 'email' | 'complete';
+
+const STORAGE_KEY = 'stoffwechsel-quiz-result';
 
 interface UseQuizReturn {
   state: QuizState;
@@ -27,6 +30,7 @@ interface UseQuizReturn {
 }
 
 export const useQuiz = (): UseQuizReturn => {
+  const navigate = useNavigate();
   const [state, setState] = useState<QuizState>('start');
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [scores, setScores] = useState<QuizScores>({ A: 0, B: 0, C: 0 });
@@ -49,26 +53,33 @@ export const useQuiz = (): UseQuizReturn => {
 
   const answerQuestion = useCallback((profile: ProfileType) => {
     // Update scores
-    setScores((prev) => ({
-      ...prev,
-      [profile]: prev[profile] + 1,
-    }));
+    const updatedScores = {
+      ...scores,
+      [profile]: scores[profile] + 1,
+    };
+    setScores(updatedScores);
 
     // Check if this was the last question
     if (currentQuestionIndex >= totalQuestions - 1) {
       // Calculate result with updated scores
-      const updatedScores = {
-        ...scores,
-        [profile]: scores[profile] + 1,
-      };
       const resultProfile = calculateResult(updatedScores);
       setResult(profiles[resultProfile]);
-      setState('result');
+      
+      // Store result in localStorage and navigate to result page
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({
+        profileId: resultProfile,
+        scores: updatedScores,
+        unlocked: false,
+        timestamp: Date.now(),
+      }));
+      
+      // Navigate to neutral result page
+      navigate('/r7k3pq');
     } else {
       // Move to next question
       setCurrentQuestionIndex((prev) => prev + 1);
     }
-  }, [currentQuestionIndex, totalQuestions, scores]);
+  }, [currentQuestionIndex, totalQuestions, scores, navigate]);
 
   const submitEmail = useCallback(() => {
     if (email && email.includes('@')) {
@@ -84,6 +95,7 @@ export const useQuiz = (): UseQuizReturn => {
     setScores({ A: 0, B: 0, C: 0 });
     setResult(null);
     setEmail('');
+    localStorage.removeItem(STORAGE_KEY);
   }, []);
 
   return {

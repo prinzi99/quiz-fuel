@@ -54,10 +54,11 @@ const QuizResult = ({
             </p>
           </div>
 
-          {/* Quentn Form Integration */}
+          {/* Quentn Form Integration - Profile-specific form IDs */}
           <QuentnEmailForm 
             onEmailSubmit={onSubmitEmail}
             buttonText="👉 Auswertung per Mail erhalten"
+            formId={result.id === 'A' ? '2913' : result.id === 'B' ? '2918' : '2923'}
           />
 
           <p className="text-xs text-muted-foreground text-center mt-4">

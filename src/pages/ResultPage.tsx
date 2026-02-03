@@ -122,10 +122,9 @@ const ResultPage = () => {
                   href="https://drive.google.com/file/d/14yKWsTsyruBggxHCcYNs6lqHpKPf8EYH/view?usp=drive_link" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="whitespace-normal text-center"
                 >
-                  Kostenlose Auswertung als PDF herunterladen
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform flex-shrink-0" />
+                  Der Stoffwechsel-Code
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
               <p className="text-xs text-muted-foreground mt-4">

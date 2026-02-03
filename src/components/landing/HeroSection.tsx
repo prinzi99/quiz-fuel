@@ -5,7 +5,7 @@ import heroImage from "@/assets/hero-abstract.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden">
       {/* Background with subtle gradient overlay */}
       <div className="absolute inset-0">
         <img 
@@ -17,22 +17,22 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container-narrow section-padding text-center">
+      <div className="relative z-10 w-full px-4 sm:px-6 md:px-8 py-16 md:py-24 lg:py-32 text-center max-w-3xl mx-auto">
         <div className="animate-fade-in-up">
           {/* Small trust badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-8">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6 md:mb-8">
             <span className="w-2 h-2 rounded-full bg-secondary animate-pulse-soft" />
             Wissenschaftlich fundiert
           </div>
 
           {/* H1 - Main headline */}
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-6">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-4 md:mb-6 px-2">
             Warum Keto & gesunde Ernährung bei Dir nicht funktionieren – 
             <span className="text-primary"> obwohl Du alles richtig machst</span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed px-2">
             Viele Menschen scheitern nicht an Disziplin, sondern an einem blockierten Stoffwechsel. 
             Finde heraus, was Deinen Körper gerade ausbremst.
           </p>
@@ -42,10 +42,11 @@ const HeroSection = () => {
             variant="cta" 
             size="xl" 
             asChild
-            className="mb-6"
+            className="mb-4 md:mb-6 w-full sm:w-auto"
           >
             <Link to="/quiz">
-              Jetzt herausfinden, was meinen Stoffwechsel blockiert
+              <span className="hidden sm:inline">Jetzt herausfinden, was meinen Stoffwechsel blockiert</span>
+              <span className="sm:hidden">Zum Stoffwechsel-Quiz</span>
             </Link>
           </Button>
 

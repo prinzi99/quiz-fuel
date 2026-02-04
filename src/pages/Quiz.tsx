@@ -8,6 +8,7 @@ import Footer from '@/components/landing/Footer';
 import QuizProgress from '@/components/quiz/QuizProgress';
 import QuizQuestion from '@/components/quiz/QuizQuestion';
 import QuizResult from '@/components/quiz/QuizResult';
+import { trackQuizStartConversion } from '@/lib/gtm';
 import {
   quizQuestions,
   profiles,
@@ -35,6 +36,9 @@ const Quiz = () => {
     : step === 'intro' ? 0 : 100;
 
   const handleStartQuiz = () => {
+    // Track Google Ads conversion
+    trackQuizStartConversion();
+    
     setStep('questions');
     setCurrentQuestionIndex(0);
     setScores({ A: 0, B: 0, C: 0 });

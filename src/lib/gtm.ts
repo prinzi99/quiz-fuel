@@ -127,3 +127,17 @@ export const trackEvent = (
     ...eventParams,
   });
 };
+
+// Track Quiz Start conversion (Google Ads)
+export const trackQuizStartConversion = (callback?: () => void) => {
+  if (!window.gtag) {
+    initializeDataLayer();
+  }
+  
+  window.gtag('event', 'conversion', {
+    'send_to': 'AW-17032247359/V1s4CO6mxPIbEL_wzbk_',
+    'event_callback': callback,
+  });
+  
+  console.log('[GTM] Quiz Start conversion tracked');
+};

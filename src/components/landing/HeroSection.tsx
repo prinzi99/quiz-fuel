@@ -17,7 +17,7 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full px-4 sm:px-6 md:px-8 py-10 md:py-20 lg:py-28 text-center max-w-3xl mx-auto">
+      <div className="relative z-10 w-full px-4 sm:px-6 md:px-8 pt-4 pb-10 md:pt-12 md:pb-20 lg:pt-16 lg:pb-28 text-center max-w-3xl mx-auto">
         <div className="animate-fade-in-up">
           {/* Small trust badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6 md:mb-8">

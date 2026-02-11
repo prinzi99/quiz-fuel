@@ -12,6 +12,9 @@ const HeroSection = () => {
           src={heroImage} 
           alt="Abstrakte Darstellung von Stoffwechsel und Gesundheit" 
           className="w-full h-full object-cover opacity-20"
+          fetchPriority="high"
+          width={1920}
+          height={1080}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
       </div>

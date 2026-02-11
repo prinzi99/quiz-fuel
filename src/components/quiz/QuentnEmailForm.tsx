@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { User, Mail } from 'lucide-react';
+import { useLoadQuentnScript } from '@/hooks/useLoadQuentnScript';
 
 interface QuentnEmailFormProps {
   onEmailSubmit?: () => void;
@@ -16,6 +17,7 @@ export const QuentnEmailForm = ({
   redirectTo = "/danke"
 }: QuentnEmailFormProps) => {
   const navigate = useNavigate();
+  useLoadQuentnScript();
   const [firstName, setFirstName] = useState('');
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);

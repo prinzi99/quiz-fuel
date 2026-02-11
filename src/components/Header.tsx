@@ -10,6 +10,9 @@ const Header = () => {
             src={biohackLogo}
             alt="Philipp's Biohack Logo"
             className="w-8 h-8 md:w-10 md:h-10 rounded-full object-cover"
+            width={40}
+            height={40}
+            loading="eager"
           />
           <span className="text-primary-foreground text-lg md:text-xl font-medium tracking-wide">
             Philipp's Biohack

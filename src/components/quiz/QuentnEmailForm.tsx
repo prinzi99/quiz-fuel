@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { User, Mail } from 'lucide-react';
 import { useLoadQuentnScript } from '@/hooks/useLoadQuentnScript';
+import { getUtmParams } from '@/hooks/useUtmParams';
 
 interface QuentnEmailFormProps {
   onEmailSubmit?: () => void;
@@ -33,6 +34,21 @@ export const QuentnEmailForm = ({
       const formData = new FormData();
       formData.append('first_name', firstName);
       formData.append('mail', email);
+
+      // Append UTM params as Quentn custom fields
+      const utmParams = getUtmParams();
+      const utmFieldMap: Record<string, string> = {
+        utm_source: 'field_utm_source',
+        utm_medium: 'field_utm_medium',
+        utm_campaign: 'field_utm_campaign',
+        utm_content: 'field_utm_content',
+        utm_term: 'field_utm_term',
+      };
+      Object.entries(utmParams).forEach(([key, value]) => {
+        if (value) {
+          formData.append(utmFieldMap[key] || key, value);
+        }
+      });
 
       await fetch(`https://s1k575.eu-2.quentn-site.com/public/forms/${formId}/raw/submit`, {
         method: 'POST',

@@ -37,7 +37,6 @@ export const QuentnEmailForm = ({
 
       // Append UTM params as Quentn custom fields
       const utmParams = getUtmParams();
-      console.log('UTM params from sessionStorage:', utmParams);
       const utmFieldMap: Record<string, string> = {
         utm_source: 'field_utm_source',
         utm_medium: 'field_utm_medium',
@@ -48,7 +47,6 @@ export const QuentnEmailForm = ({
       Object.entries(utmParams).forEach(([key, value]) => {
         if (value) {
           formData.append(utmFieldMap[key] || key, value);
-          console.log(`Appending UTM: ${utmFieldMap[key] || key} = ${value}`);
         }
       });
 
@@ -58,7 +56,7 @@ export const QuentnEmailForm = ({
         mode: 'no-cors', // Quentn doesn't support CORS
       });
 
-      console.log('Quentn form submitted successfully');
+      
 
       // Call the callback after successful submission
       if (onEmailSubmit) {
